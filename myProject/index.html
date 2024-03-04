@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 掛載 Boostrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <style></style>
+  </head>
+  <body>
+    <!-- container 容器實作 -->
+    <!-- 三欄排版 start -->
+    <!-- .container>.row>.col-4*3>a{商品$} -->
+    <!-- .container>.row>.col-4*3>img.w-100[src='https://placehold.co/600x400']+a{商品$} -->
+    <div class="container">
+      <div class="row">
+        <div class="col-4">
+          <img class="w-100" src="https://placehold.co/600x400" alt="" /><a
+            href=""
+            >商品1</a
+          >
+        </div>
+        <div class="col-4">
+          <img class="w-100" src="https://placehold.co/600x400" alt="" /><a
+            href=""
+            >商品2</a
+          >
+        </div>
+        <div class="col-4">
+          <img class="w-100" src="https://placehold.co/600x400" alt="" /><a
+            href=""
+            >商品3</a
+          >
+        </div>
+      </div>
+    </div>
+    <!-- 三欄排版 end -->
+
+    <!-- breakpoint 斷點實作 -->
+    <!-- 四欄排版 start -->
+    <!-- .container>.row>.col-6.col-md-4.col-lg-3*4>img.w-100[src='https://placehold.co/600x400']+a{商品$} -->
+    <div class="container">
+      <div class="row">
+        <div class="col-6 col-md-4 col-lg-3">
+          <img src="https://placehold.co/600x400" alt="" class="w-100" /><a
+            href=""
+            >斷點1</a
+          >
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <img src="https://placehold.co/600x400" alt="" class="w-100" /><a
+            href=""
+            >斷點2</a
+          >
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <img src="https://placehold.co/600x400" alt="" class="w-100" /><a
+            href=""
+            >斷點3</a
+          >
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <img src="https://placehold.co/600x400" alt="" class="w-100" /><a
+            href=""
+            >斷點4</a
+          >
+        </div>
+      </div>
+    </div>
+    <!-- 掛載 Boostrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
