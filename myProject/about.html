@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>關於我們 | Cama</title>
+    <!-- 掛載 Boostrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <!-- Boostrap icon css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- 掛載自己的 CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- 內容實作 -->
+    <!-- .container>.row>.col-12.col-md-3{側邊欄}+.col-12.col-md-9{內容} -->
+    <!-- 
+        加入顏色，觀察範圍
+        需要獨立一個區塊，可以有間距
+    -->
+    <!-- 
+        .container>.row>.col-12.col-md-3>.bg-primary{側邊欄}+.col-12.col-md-9>.bg-warning{內容}
+     -->
+    <!-- container 容器 start -->
+    <div class="container">
+      <div class="row">
+        <!-- 頁面標題 -->
+        <!-- h2.col-12{關於我們} -->
+        <h2 class="col-12">關於我們</h2>
+        <!-- 左半邊 start -->
+        <div class="col-12 col-md-3">
+          <div class="bg-primary">側邊欄</div>
+        </div>
+        <!-- 左半邊 end -->
+        <!-- 右半邊 start -->
+        <div class="col-12 col-md-9">
+          <!-- 兩個列各兩欄 -->
+          <!-- 
+            (.row>(.col-12.col-md-6>img[src="../images/toy_01.png"].w-100)+.col-12.col-md-6{清水福鮭})+(.row>(.col-12.col-md-6.order-md-2>img[src="../images/toy_02.png"].w-100)+.col-12.col-md-6.order-md-1{鮪魚俠}) 
+          -->
+          <!-- row start -->
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <img src="../images/toy_01.png" alt="" class="w-100" />
+            </div>
+            <div class="col-12 col-md-6">
+              <!-- 文字區塊樣式另外寫 -->
+              <!-- .bg-primary.text-white.p-4.rounded.mt-3{清水福鮭}  -->
+              <div class="bg-primary text-white p-4 rounded mt-3">清水福鮭</div>
+            </div>
+          </div>
+          <div class="row">
+            <!-- 手機 欄位排序正常 圖 字 -->
+            <!-- 中型設備以上 order-mg-x 欄位排序對調 字 圖-->
+            <div class="col-12 col-md-6 order-md-2">
+              <img src="../images/toy_02.png" alt="" class="w-100" />
+            </div>
+            <div class="col-12 col-md-6 order-md-1">
+              <!-- .bg-primary.text-white.p-4.rounded.mt-3{鮪魚俠} -->
+              <div class="bg-primary text-white p-4 rounded mt-3">鮪魚俠</div>
+            </div>
+          </div>
+          <!-- row end -->
+          <!-- row start -->
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <img src="../images/toy_01.png" alt="" class="w-100" />
+            </div>
+            <div class="col-12 col-md-6">
+              <!-- 文字區塊樣式另外寫 -->
+              <!-- .bg-primary.text-white.p-4.rounded.mt-3{清水福鮭}  -->
+              <div class="bg-primary text-white p-4 rounded mt-3">清水福鮭</div>
+            </div>
+          </div>
+          <div class="row">
+            <!-- 手機 欄位排序正常 圖 字 -->
+            <!-- 中型設備以上 order-mg-x 欄位排序對調 字 圖-->
+            <div class="col-12 col-md-6 order-md-2">
+              <img src="../images/toy_02.png" alt="" class="w-100" />
+            </div>
+            <div class="col-12 col-md-6 order-md-1">
+              <!-- .bg-primary.text-white.p-4.rounded.mt-3{鮪魚俠} -->
+              <div class="bg-primary text-white p-4 rounded mt-3">鮪魚俠</div>
+            </div>
+          </div>
+          <!-- row end -->
+        </div>
+        <!-- 右半邊 end -->
+      </div>
+    </div>
+    <!-- container 容器 end -->
+    <!-- 
+        bootstrap icon 使用
+        偽裝成文字的 icon
+        所以可以用文字樣式  
+    -->
+    <div style="text-align: center">
+      <i class="bi bi-twitter fs-1"></i>
+      <i class="bi bi-line fs-1"></i>
+      <i class="bi bi-instagram fs-1"></i>
+      <i class="bi bi-facebook fs-1"></i>
+      <i class="bi bi-youtube fs-1"></i>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
