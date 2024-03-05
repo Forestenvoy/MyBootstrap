@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- 固定頁首、頁尾 html、body 都需要設定class -->
+<!-- h-100 高度固定視窗大小 -->
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 掛載 Boostrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <!-- Boostrap icon css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <!-- 實作 頁首 頁尾 -->
+  <!-- h-100 高度100% -->
+  <!-- d-flex 垂直置中 -->
+  <!-- flex-column 垂直排列 -->
+  <body class="d-flex flex-column h-100">
+    <main class="flex-shrink-0">
+      <header class="bg-dark">頁首</header>
+      <div class="container mb-5">內容</div>
+    </main>
+    <footer class="bg-primary mt-auto">頁尾</footer>
+
+    <!-- 掛載 Boostrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

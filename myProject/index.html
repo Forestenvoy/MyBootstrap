@@ -1,125 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>首頁 | Cama</title>
-    <!-- 掛載 Boostrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
-      crossorigin="anonymous"
-    />
-    <style></style>
-  </head>
 
-  <body>
-    <!-- container 容器實作 -->
-    <!-- 三欄排版 start -->
-    <!-- .container>.row>.col-4*3>a{商品$} -->
-    <!-- .container>.row>.col-4*3>img.w-100[src='https://placehold.co/600x400']+a{商品$} -->
-    <div class="container">
-      <div class="row">
-        <div class="col-4">
-          <img
-            class="w-100"
-            src="https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg?t=1709086268"
-            alt=""
-          /><a href="">商品1</a>
-        </div>
-        <div class="col-4">
-          <img class="w-100" src="https://placehold.co/600x400" alt="" /><a
-            href=""
-            >商品2</a
-          >
-        </div>
-        <div class="col-4">
-          <img class="w-100" src="https://placehold.co/600x400" alt="" /><a
-            href=""
-            >商品3</a
-          >
-        </div>
-      </div>
-    </div>
-    <!-- 三欄排版 end -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>首頁 | Cama</title>
+  <!-- 掛載 Boostrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
+  <style></style>
+</head>
 
-    <!-- 兩欄排版 start -->
-    <div class="container mb-5">
-      <div class="row">
-        <div class="col-12 col-md-6">
-          <!-- .ration.ration-16x9 -->
-          <div class="ration ration-16x9 mb-4">
-            <!-- youtube 影片嵌入 -->
-            <!-- iframe start -->
-            <iframe
-              width="438"
-              height="246"
-              src="https://www.youtube.com/embed/Q-0s23Wu4QI"
-              title="MYTH &amp; ROID「Endless Embrace」MV（TVアニメ「メイドインアビス 烈日の黄金郷」EDテーマ）"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
-            <!-- iframe end -->
+<body>
+  <!-- 卡片實作 -->
+  <!-- .container>.row>.col-12.col-md-6.col-xl-3 -->
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6 col-xl-3">
+        <!-- card start -->
+        <div class="card m-3" style="width: 18rem;">
+          <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg?t=1709086268"
+            class="card-img-top" alt="eldenring">
+          <div class="card-body">
+            <h5 class="card-title">Elden Ring</h5>
+            <p class="card-text">遊戲資訊</p>
+            <a href="#" class="btn btn-primary">Buy</a>
           </div>
         </div>
-        <div class="col-12 col-md-6">
-          <div class="ration ration-16x9 mb-4">
-            <!-- youtube 影片嵌入 -->
-            <!-- iframe start -->
-            <iframe
-              width="438"
-              height="246"
-              src="https://www.youtube.com/embed/Q-0s23Wu4QI"
-              title="MYTH &amp; ROID「Endless Embrace」MV（TVアニメ「メイドインアビス 烈日の黄金郷」EDテーマ）"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
-            <!-- iframe end -->
+        <!-- card end -->
+      </div>
+      <div class="col-12 col-md-6 col-xl-3">
+        <!-- card start -->
+        <div class="card m-3" style="width: 18rem;">
+          <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg?t=1709086268"
+            class="card-img-top" alt="eldenring">
+          <div class="card-body">
+            <h5 class="card-title">Elden Ring</h5>
+            <p class="card-text">遊戲資訊</p>
+            <a href="#" class="btn btn-primary">Buy</a>
+          </div>
+        </div>
+        <!-- card end -->
+      </div>
+    </div>
+  </div>
+
+  <!-- .container>.row>.col-12.col-xl-6 -->
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-xl-6">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg?t=1709086268"
+                class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Elden Ring</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- 兩欄排版 end -->
-
-    <!-- breakpoint 斷點實作 -->
-    <!-- 四欄排版 start -->
-    <!-- .container>.row>.col-6.col-md-4.col-lg-3*4>img.w-100[src='https://placehold.co/600x400']+a{商品$} -->
-    <div class="container">
-      <div class="row">
-        <div class="col-6 col-md-4 col-lg-3">
-          <img src="https://placehold.co/600x400" alt="" class="w-100" /><a
-            href=""
-            >斷點1</a
-          >
-        </div>
-        <div class="col-6 col-md-4 col-lg-3">
-          <img src="https://placehold.co/600x400" alt="" class="w-100" /><a
-            href=""
-            >斷點2</a
-          >
-        </div>
-        <div class="col-6 col-md-4 col-lg-3">
-          <img src="https://placehold.co/600x400" alt="" class="w-100" /><a
-            href=""
-            >斷點3</a
-          >
-        </div>
-        <div class="col-6 col-md-4 col-lg-3">
-          <img src="https://placehold.co/600x400" alt="" class="w-100" /><a
-            href=""
-            >斷點4</a
-          >
+      <div class="col-12 col-xl-6">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg?t=1709086268"
+                class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Elden Ring</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <!-- 掛載 Boostrap JS -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+  </div>
+  <!-- container 容器實作 -->
+  <!-- 三欄排版 start -->
+  <!-- .container>.row>.col-4*3>a{商品$} -->
+  <!-- .container>.row>.col-4*3>img.w-100[src='https://placehold.co/600x400']+a{商品$} -->
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <img class="w-100" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg?t=1709086268"
+          alt="" /><a href="">商品1</a>
+      </div>
+      <div class="col-4">
+        <img class="w-100" src="https://placehold.co/600x400" alt="" /><a href="">商品2</a>
+      </div>
+      <div class="col-4">
+        <img class="w-100" src="https://placehold.co/600x400" alt="" /><a href="">商品3</a>
+      </div>
+    </div>
+  </div>
+  <!-- 三欄排版 end -->
+
+  <!-- 兩欄排版 start -->
+  <div class="container mb-5">
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <!-- .ration.ration-16x9 -->
+        <div class="ration ration-16x9 mb-4">
+          <!-- youtube 影片嵌入 -->
+          <!-- iframe start -->
+          <iframe width="438" height="246" src="https://www.youtube.com/embed/Q-0s23Wu4QI"
+            title="MYTH &amp; ROID「Endless Embrace」MV（TVアニメ「メイドインアビス 烈日の黄金郷」EDテーマ）" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+          <!-- iframe end -->
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="ration ration-16x9 mb-4">
+          <!-- youtube 影片嵌入 -->
+          <!-- iframe start -->
+          <iframe width="438" height="246" src="https://www.youtube.com/embed/Q-0s23Wu4QI"
+            title="MYTH &amp; ROID「Endless Embrace」MV（TVアニメ「メイドインアビス 烈日の黄金郷」EDテーマ）" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+          <!-- iframe end -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 兩欄排版 end -->
+
+  <!-- breakpoint 斷點實作 -->
+  <!-- 四欄排版 start -->
+  <!-- .container>.row>.col-6.col-md-4.col-lg-3*4>img.w-100[src='https://placehold.co/600x400']+a{商品$} -->
+  <div class="container">
+    <div class="row">
+      <div class="col-6 col-md-4 col-lg-3">
+        <img src="https://placehold.co/600x400" alt="" class="w-100" /><a href="">斷點1</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <img src="https://placehold.co/600x400" alt="" class="w-100" /><a href="">斷點2</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <img src="https://placehold.co/600x400" alt="" class="w-100" /><a href="">斷點3</a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3">
+        <img src="https://placehold.co/600x400" alt="" class="w-100" /><a href="">斷點4</a>
+      </div>
+    </div>
+  </div>
+  <!-- 掛載 Boostrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
