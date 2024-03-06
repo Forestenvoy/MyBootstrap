@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100">
 
 <head>
   <meta charset="UTF-8" />
@@ -11,150 +11,246 @@
   <style></style>
 </head>
 
-<body>
-  <!-- 卡片實作 -->
-  <!-- .container>.row>.col-12.col-md-6.col-xl-3 -->
-  <div class="container">
-    <div class="row">
-      <div class="col-12 col-md-6 col-xl-3">
-        <!-- card start -->
-        <div class="card m-3" style="width: 18rem;">
-          <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg?t=1709086268"
-            class="card-img-top" alt="eldenring">
-          <div class="card-body">
-            <h5 class="card-title">Elden Ring</h5>
-            <p class="card-text">遊戲資訊</p>
-            <a href="#" class="btn btn-primary">Buy</a>
+<body class="d-flex flex-column h-100">
+  <main class="flex-shrink-0">
+    <!-- 導覽列實作 -->
+    <!-- header start -->
+    <header>
+      <!-- 導覽 導覽摺疊寬幅  淺色模式 -->
+      <!-- 導覽列可更改顏色樣式 navbar-light、bg-light -->
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <!-- container-fluid 寬版:會讓導覽列的寬度固定在 100% -->
+        <!-- container 每一個響應式斷點都會設置一個 max-width -->
+        <div class="container-fluid">
+          <!-- 導覽列(網站、品牌)標題  navbar-brand -->
+          <a class="navbar-brand" href="index.html">Cama</a>
+          <!-- navbar-toggler 是 menu-button (那個三條線的菜單按鈕)  -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <!-- navbar-toggler-icon 為三條線的 icon -->
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- margin left/start ~ ms-x，margin right/end ~ me-x -->
+            <!-- ms-auto  自動靠右 -->
+            <!-- me-auto  自動靠左 -->
+            <!-- m-auto  中間 -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <!-- active 顯目狀態 -->
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">關於我們</a>
+              </li>
+              <!-- dropdown 開關 -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="javascript:;" id="navbarDropdown" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  產品列表
+                </a>
+                <!-- dropdown-menu 開關下拉選單 -->
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="product.html">咖啡</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="product.html">餐食</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="product.html">飲品</a>
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="store.html">門市資訊</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">關於我們</a>
+              </li>
+            </ul>
+            <div class="d-flex">
+              <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                  class="fs-3 me-2 bi bi-person"></i></a>
+              <i class="fs-3 me-2 bi bi-cart"></i>
+            </div>
+            <!-- form 裝 搜尋按鈕 用的-->
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
           </div>
         </div>
-        <!-- card end -->
-      </div>
-      <div class="col-12 col-md-6 col-xl-3">
-        <!-- card start -->
-        <div class="card m-3" style="width: 18rem;">
-          <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg?t=1709086268"
-            class="card-img-top" alt="eldenring">
-          <div class="card-body">
-            <h5 class="card-title">Elden Ring</h5>
-            <p class="card-text">遊戲資訊</p>
-            <a href="#" class="btn btn-primary">Buy</a>
-          </div>
-        </div>
-        <!-- card end -->
+      </nav>
+    </header>
+    <!-- header end -->
+    <!-- 麵包屑實作 -->
+    <!-- breadcrumb start -->
+    <div class="p-3 bg-light mb-5">
+      <div class="container">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">首頁</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+              聯絡我們
+            </li>
+          </ol>
+        </nav>
       </div>
     </div>
-  </div>
-
-  <!-- .container>.row>.col-12.col-xl-6 -->
-  <div class="container">
-    <div class="row">
-      <div class="col-12 col-xl-6">
-        <div class="card mb-3" style="max-width: 540px;">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg?t=1709086268"
-                class="img-fluid rounded-start" alt="...">
+    <!-- 卡片實作 -->
+    <!-- .container>.row>.col-12.col-md-6.col-xl-3 -->
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6 col-xl-3">
+          <!-- card start -->
+          <div class="card m-3" style="width: 18rem;">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg?t=1709086268"
+              class="card-img-top" alt="eldenring">
+            <div class="card-body">
+              <h5 class="card-title">Elden Ring</h5>
+              <p class="card-text">遊戲資訊</p>
+              <a href="#" class="btn btn-primary">Buy</a>
             </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Elden Ring</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+          <!-- card end -->
+        </div>
+        <div class="col-12 col-md-6 col-xl-3">
+          <!-- card start -->
+          <div class="card m-3" style="width: 18rem;">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg?t=1709086268"
+              class="card-img-top" alt="eldenring">
+            <div class="card-body">
+              <h5 class="card-title">Elden Ring</h5>
+              <p class="card-text">遊戲資訊</p>
+              <a href="#" class="btn btn-primary">Buy</a>
+            </div>
+          </div>
+          <!-- card end -->
+        </div>
+      </div>
+    </div>
+
+    <!-- .container>.row>.col-12.col-xl-6 -->
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-xl-6">
+          <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg?t=1709086268"
+                  class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Elden Ring</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                    additional
+                    content. This content is a little bit longer.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-xl-6">
+          <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg?t=1709086268"
+                  class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Elden Ring</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                    additional
+                    content. This content is a little bit longer.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-12 col-xl-6">
-        <div class="card mb-3" style="max-width: 540px;">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg?t=1709086268"
-                class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Elden Ring</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-              </div>
-            </div>
+    </div>
+    <!-- container 容器實作 -->
+    <!-- 三欄排版 start -->
+    <!-- .container>.row>.col-4*3>a{商品$} -->
+    <!-- .container>.row>.col-4*3>img.w-100[src='https://placehold.co/600x400']+a{商品$} -->
+    <div class="container">
+      <div class="row">
+        <div class="col-4">
+          <img class="w-100" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg?t=1709086268"
+            alt="" /><a href="">商品1</a>
+        </div>
+        <div class="col-4">
+          <img class="w-100" src="https://placehold.co/600x400" alt="" /><a href="">商品2</a>
+        </div>
+        <div class="col-4">
+          <img class="w-100" src="https://placehold.co/600x400" alt="" /><a href="">商品3</a>
+        </div>
+      </div>
+    </div>
+    <!-- 三欄排版 end -->
+
+    <!-- 兩欄排版 start -->
+    <div class="container mb-5">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <!-- .ration.ration-16x9 -->
+          <div class="ration ration-16x9 mb-4">
+            <!-- youtube 影片嵌入 -->
+            <!-- iframe start -->
+            <iframe width="438" height="246" src="https://www.youtube.com/embed/Q-0s23Wu4QI"
+              title="MYTH &amp; ROID「Endless Embrace」MV（TVアニメ「メイドインアビス 烈日の黄金郷」EDテーマ）" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+            <!-- iframe end -->
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="ration ration-16x9 mb-4">
+            <!-- youtube 影片嵌入 -->
+            <!-- iframe start -->
+            <iframe width="438" height="246" src="https://www.youtube.com/embed/Q-0s23Wu4QI"
+              title="MYTH &amp; ROID「Endless Embrace」MV（TVアニメ「メイドインアビス 烈日の黄金郷」EDテーマ）" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+            <!-- iframe end -->
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- container 容器實作 -->
-  <!-- 三欄排版 start -->
-  <!-- .container>.row>.col-4*3>a{商品$} -->
-  <!-- .container>.row>.col-4*3>img.w-100[src='https://placehold.co/600x400']+a{商品$} -->
-  <div class="container">
-    <div class="row">
-      <div class="col-4">
-        <img class="w-100" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg?t=1709086268"
-          alt="" /><a href="">商品1</a>
-      </div>
-      <div class="col-4">
-        <img class="w-100" src="https://placehold.co/600x400" alt="" /><a href="">商品2</a>
-      </div>
-      <div class="col-4">
-        <img class="w-100" src="https://placehold.co/600x400" alt="" /><a href="">商品3</a>
-      </div>
-    </div>
-  </div>
-  <!-- 三欄排版 end -->
+    <!-- 兩欄排版 end -->
 
-  <!-- 兩欄排版 start -->
-  <div class="container mb-5">
-    <div class="row">
-      <div class="col-12 col-md-6">
-        <!-- .ration.ration-16x9 -->
-        <div class="ration ration-16x9 mb-4">
-          <!-- youtube 影片嵌入 -->
-          <!-- iframe start -->
-          <iframe width="438" height="246" src="https://www.youtube.com/embed/Q-0s23Wu4QI"
-            title="MYTH &amp; ROID「Endless Embrace」MV（TVアニメ「メイドインアビス 烈日の黄金郷」EDテーマ）" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
-          <!-- iframe end -->
+    <!-- breakpoint 斷點實作 -->
+    <!-- 四欄排版 start -->
+    <!-- .container>.row>.col-6.col-md-4.col-lg-3*4>img.w-100[src='https://placehold.co/600x400']+a{商品$} -->
+    <div class="container">
+      <div class="row">
+        <div class="col-6 col-md-4 col-lg-3">
+          <img src="https://placehold.co/600x400" alt="" class="w-100" /><a href="">斷點1</a>
         </div>
-      </div>
-      <div class="col-12 col-md-6">
-        <div class="ration ration-16x9 mb-4">
-          <!-- youtube 影片嵌入 -->
-          <!-- iframe start -->
-          <iframe width="438" height="246" src="https://www.youtube.com/embed/Q-0s23Wu4QI"
-            title="MYTH &amp; ROID「Endless Embrace」MV（TVアニメ「メイドインアビス 烈日の黄金郷」EDテーマ）" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
-          <!-- iframe end -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <img src="https://placehold.co/600x400" alt="" class="w-100" /><a href="">斷點2</a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <img src="https://placehold.co/600x400" alt="" class="w-100" /><a href="">斷點3</a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <img src="https://placehold.co/600x400" alt="" class="w-100" /><a href="">斷點4</a>
         </div>
       </div>
     </div>
-  </div>
-  <!-- 兩欄排版 end -->
-
-  <!-- breakpoint 斷點實作 -->
-  <!-- 四欄排版 start -->
-  <!-- .container>.row>.col-6.col-md-4.col-lg-3*4>img.w-100[src='https://placehold.co/600x400']+a{商品$} -->
-  <div class="container">
-    <div class="row">
-      <div class="col-6 col-md-4 col-lg-3">
-        <img src="https://placehold.co/600x400" alt="" class="w-100" /><a href="">斷點1</a>
-      </div>
-      <div class="col-6 col-md-4 col-lg-3">
-        <img src="https://placehold.co/600x400" alt="" class="w-100" /><a href="">斷點2</a>
-      </div>
-      <div class="col-6 col-md-4 col-lg-3">
-        <img src="https://placehold.co/600x400" alt="" class="w-100" /><a href="">斷點3</a>
-      </div>
-      <div class="col-6 col-md-4 col-lg-3">
-        <img src="https://placehold.co/600x400" alt="" class="w-100" /><a href="">斷點4</a>
-      </div>
-    </div>
-  </div>
+  </main>
+  <footer class="bg-primary mt-auto">頁尾</footer>
   <!-- 掛載 Boostrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
