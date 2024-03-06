@@ -20,3 +20,12 @@
 .price::after{
     content: " 元";
 }
+
+@media (min-width:768px){
+    .w-lg-50{
+        width: 50% !important;
+    }
+}
+
+.start-25{left:25%;}
+.start-75{left:75%;}

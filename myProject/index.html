@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>首頁|Cama</title>
     <!-- 掛載 Boostrap CSS -->
-    <link
+    <!-- <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
       crossorigin="anonymous"
-    />
+    /> -->
     <!-- Boostrap icon css -->
     <link
       rel="stylesheet"
@@ -499,8 +499,75 @@
         </div>
       </div>
       <!-- 四欄排版 end -->
+      <!-- 六欄排版 start -->
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-6 col-md-4 col-lg-2">
+            <!-- 圖片只到自己的最大寬 塊級元素 外邊界自動延伸 margin:auto -->
+            <img
+              src="../images/Carousel_1.png"
+              alt=""
+              class="img-fluid d-block m-auto"
+              width="300"
+            /><a href="">社群按鈕1</a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <img
+              src="../images/Carousel_1.png"
+              alt=""
+              class="img-fluid d-block m-auto"
+              width="300"
+            /><a href="">社群按鈕2</a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <img
+              src="../images/Carousel_1.png"
+              alt=""
+              class="img-fluid d-block m-auto"
+              width="300"
+            /><a href="">社群按鈕3</a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <img
+              src="../images/Carousel_1.png"
+              alt=""
+              class="img-fluid d-block m-auto"
+              width="300"
+            /><a href="">社群按鈕4</a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <img
+              src="../images/Carousel_1.png"
+              alt=""
+              class="img-fluid d-block m-auto"
+              width="300"
+            /><a href="">社群按鈕5</a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <img
+              src="../images/Carousel_1.png"
+              alt=""
+              class="img-fluid d-block m-auto"
+              width="300"
+            /><a href="">社群按鈕6</a>
+          </div>
+        </div>
+      </div>
+      <!-- 六欄排版 end -->
     </main>
     <footer class="bg-primary mt-auto">頁尾</footer>
+    <!-- Loading -->
+    <!-- 寬100% 高100% 背景白色 定位固定 display-flex 水平置中 垂直置中 (子元素單一一個) -->
+    <!-- .w-100.h-100.bg-white.position-fixed.d-flex.justify-content-center.align-items-center -->
+    <div
+      class="w-100 h-100 bg-white position-fixed d-flex justify-content-center align-items-center d-none"
+      style="z-index: 999"
+    >
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+
     <!-- PageTop -->
     <!-- href="#" 自動到最頂端 -->
     <!-- pageTop start -->
