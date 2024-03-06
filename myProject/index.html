@@ -1,260 +1,556 @@
 <!DOCTYPE html>
 <html lang="en" class="h-100">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>首頁|Cama</title>
+    <!-- 掛載 Boostrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <!-- Boostrap icon css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>首頁 | Cama</title>
-  <!-- 掛載 Boostrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
-  <style></style>
-</head>
-
-<body class="d-flex flex-column h-100">
-  <main class="flex-shrink-0">
-    <!-- 導覽列實作 -->
-    <!-- header start -->
-    <header>
-      <!-- 導覽 導覽摺疊寬幅  淺色模式 -->
-      <!-- 導覽列可更改顏色樣式 navbar-light、bg-light -->
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <!-- container-fluid 寬版:會讓導覽列的寬度固定在 100% -->
-        <!-- container 每一個響應式斷點都會設置一個 max-width -->
-        <div class="container-fluid">
-          <!-- 導覽列(網站、品牌)標題  navbar-brand -->
-          <a class="navbar-brand" href="index.html">Cama</a>
-          <!-- navbar-toggler 是 menu-button (那個三條線的菜單按鈕)  -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <!-- navbar-toggler-icon 為三條線的 icon -->
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- margin left/start ~ ms-x，margin right/end ~ me-x -->
-            <!-- ms-auto  自動靠右 -->
-            <!-- me-auto  自動靠左 -->
-            <!-- m-auto  中間 -->
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <!-- active 顯目狀態 -->
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">關於我們</a>
-              </li>
-              <!-- dropdown 開關 -->
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="javascript:;" id="navbarDropdown" role="button"
-                  data-bs-toggle="dropdown" aria-expanded="false">
-                  產品列表
+  <body class="d-flex flex-column h-100">
+    <main class="flex-shrink-0">
+      <!-- 導覽列實作 -->
+      <!-- header start -->
+      <header>
+        <!-- 導覽 導覽摺疊寬幅  淺色模式 -->
+        <!-- 導覽列可更改顏色樣式 navbar-light、bg-light -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <!-- container-fluid 寬版:會讓導覽列的寬度固定在 100% -->
+          <!-- container 每一個響應式斷點都會設置一個 max-width -->
+          <div class="container-fluid">
+            <!-- 導覽列(網站、品牌)標題  navbar-brand -->
+            <a class="navbar-brand" href="index.html">Cama</a>
+            <!-- navbar-toggler 是 menu-button (那個三條線的菜單按鈕)  -->
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <!-- navbar-toggler-icon 為三條線的 icon -->
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <!-- margin left/start ~ ms-x，margin right/end ~ me-x -->
+              <!-- ms-auto  自動靠右 -->
+              <!-- me-auto  自動靠左 -->
+              <!-- m-auto  中間 -->
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <!-- active 顯目狀態 -->
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">關於我們</a>
+                </li>
+                <!-- dropdown 開關 -->
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="javascript:;"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    產品列表
+                  </a>
+                  <!-- dropdown-menu 開關下拉選單 -->
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li>
+                      <a class="dropdown-item" href="product.html">咖啡</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="product.html">餐食</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="product.html">飲品</a>
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="store.html">門市資訊</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">關於我們</a>
+                </li>
+              </ul>
+              <div class="d-flex">
+                <a
+                  href="javascript:;"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  ><i class="fs-3 me-2 bi bi-person"></i
+                ></a>
+                <!-- 相對定位 -->
+                <!-- 畫布實作 : 動態範例 -->
+                <a
+                  class="position-relative"
+                  data-bs-toggle="offcanvas"
+                  href="#offcanvasExample"
+                  role="button"
+                  aria-controls="offcanvasExample"
+                >
+                  <!-- 購物車 -->
+                  <i class="fs-3 me-2 bi bi-cart"></i>
+                  <!-- 絕對定位 上邊界0 右邊界100 轉變水平置中 標籤 膠囊圓角 紅色背景 -->
+                  <span
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger mt-2"
+                  >
+                    10
+                  </span>
                 </a>
-                <!-- dropdown-menu 開關下拉選單 -->
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                    <a class="dropdown-item" href="product.html">咖啡</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="product.html">餐食</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="product.html">飲品</a>
-                  </li>
-                  <li>
-                    <hr class="dropdown-divider" />
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="store.html">門市資訊</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">關於我們</a>
-              </li>
-            </ul>
-            <div class="d-flex">
-              <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
-                  class="fs-3 me-2 bi bi-person"></i></a>
-              <i class="fs-3 me-2 bi bi-cart"></i>
+              </div>
+              <!-- form 裝 搜尋按鈕 用的-->
+              <form class="d-flex">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button class="btn btn-outline-success" type="submit">
+                  Search
+                </button>
+              </form>
             </div>
-            <!-- form 裝 搜尋按鈕 用的-->
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
           </div>
-        </div>
-      </nav>
-    </header>
-    <!-- header end -->
-    <!-- 麵包屑實作 -->
-    <!-- breadcrumb start -->
-    <div class="p-3 bg-light mb-5">
-      <div class="container">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb mb-0">
-            <li class="breadcrumb-item"><a href="index.html">首頁</a></li>
-            <li class="breadcrumb-item active" aria-current="page">
-              聯絡我們
-            </li>
-          </ol>
         </nav>
-      </div>
-    </div>
-    <!-- 卡片實作 -->
-    <!-- .container>.row>.col-12.col-md-6.col-xl-3 -->
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-6 col-xl-3">
-          <!-- card start -->
-          <div class="card m-3" style="width: 18rem;">
-            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg?t=1709086268"
-              class="card-img-top" alt="eldenring">
-            <div class="card-body">
-              <h5 class="card-title">Elden Ring</h5>
-              <p class="card-text">遊戲資訊</p>
-              <a href="#" class="btn btn-primary">Buy</a>
-            </div>
-          </div>
-          <!-- card end -->
-        </div>
-        <div class="col-12 col-md-6 col-xl-3">
-          <!-- card start -->
-          <div class="card m-3" style="width: 18rem;">
-            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg?t=1709086268"
-              class="card-img-top" alt="eldenring">
-            <div class="card-body">
-              <h5 class="card-title">Elden Ring</h5>
-              <p class="card-text">遊戲資訊</p>
-              <a href="#" class="btn btn-primary">Buy</a>
-            </div>
-          </div>
-          <!-- card end -->
+      </header>
+      <!-- header end -->
+      <!-- 麵包屑實作 -->
+      <!-- breadcrumb start -->
+      <div class="p-3 bg-light">
+        <div class="container">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+              <li class="breadcrumb-item"><a href="index.html">首頁</a></li>
+              <li class="breadcrumb-item active" aria-current="page">
+                聯絡我們
+              </li>
+            </ol>
+          </nav>
         </div>
       </div>
-    </div>
-
-    <!-- .container>.row>.col-12.col-xl-6 -->
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-xl-6">
-          <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg?t=1709086268"
-                  class="img-fluid rounded-start" alt="...">
+      <!-- 輪播實作 -->
+      <!-- Carousel start -->
+      <div class="container mx-auto my-3">
+        <div
+          id="carouselExampleControls"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="../images/Carousel_1.png"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="../images/Carousel_2.png"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="../images/Carousel_1.png"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <!-- Carousel end -->
+      <!-- 卡片實作、位置實作-->
+      <!-- .container>.row>.col-12.col-md-6.col-xl-3 -->
+      <!-- container start -->
+      <div class="container mx-auto mb-2">
+        <div class="row">
+          <h2 class="col-12 text-center m-4">熱門商品</h2>
+          <div class="col-12 col-md-6 col-xl-3">
+            <!-- card start -->
+            <div class="card mx-auto my-2 w-75" style="width: 18rem">
+              <!-- 卡片圖片裡包一個New -->
+              <!-- class="position-relative"需要重新設定父層的相對定位 -->
+              <!-- 此例:需要定位至圖片外的div區塊 -->
+              <!-- 不然相對定位會照預設的父層，像此例的父層為卡片元件 -->
+              <div class="position-relative">
+                <img
+                  src="https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg?t=1709086268"
+                  class="card-img-top"
+                  alt="eldenring"
+                />
+                <div
+                  class="position-absolute bottom-0 end-0 bg-primary text-white p-2"
+                >
+                  New
+                </div>
               </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Elden Ring</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                    additional
-                    content. This content is a little bit longer.</p>
-                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              <div class="card-body">
+                <h5 class="card-title">Elden Ring</h5>
+                <p class="card-text">遊戲資訊</p>
+                <a href="#" class="btn btn-primary">Buy</a>
+              </div>
+            </div>
+            <!-- card end -->
+          </div>
+          <div class="col-12 col-md-6 col-xl-3">
+            <!-- card start -->
+            <div class="card mx-auto my-2 w-75" style="width: 18rem">
+              <img
+                src="https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg?t=1709086268"
+                class="card-img-top"
+                alt="eldenring"
+              />
+              <!-- 絕對定位 上0 左0 -->
+              <div
+                class="position-absolute top-0 start-0 bg-primary text-white p-2"
+              >
+                New
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Elden Ring</h5>
+                <p class="card-text">遊戲資訊</p>
+                <a href="#" class="btn btn-primary">Buy</a>
+              </div>
+            </div>
+            <!-- card end -->
+          </div>
+          <div class="col-12 col-md-6 col-xl-3">
+            <!-- card start -->
+            <div class="card mx-auto my-2 w-75" style="width: 18rem">
+              <img
+                src="https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg?t=1709086268"
+                class="card-img-top"
+                alt="eldenring"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Elden Ring</h5>
+                <p class="card-text">遊戲資訊</p>
+                <a href="#" class="btn btn-primary">Buy</a>
+              </div>
+            </div>
+            <!-- card end -->
+          </div>
+          <div class="col-12 col-md-6 col-xl-3">
+            <!-- card start -->
+            <div class="card mx-auto my-2 w-75" style="width: 18rem">
+              <img
+                src="https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg?t=1709086268"
+                class="card-img-top"
+                alt="eldenring"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Elden Ring</h5>
+                <p class="card-text">遊戲資訊</p>
+                <a href="#" class="btn btn-primary">Buy</a>
+              </div>
+            </div>
+            <!-- card end -->
+          </div>
+          <div class="col-12 col-md-6 col-xl-3">
+            <!-- card start -->
+            <div class="card mx-auto my-2 w-75" style="width: 18rem">
+              <img
+                src="https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg?t=1709086268"
+                class="card-img-top"
+                alt="eldenring"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Elden Ring</h5>
+                <p class="card-text">遊戲資訊</p>
+                <a href="#" class="btn btn-primary">Buy</a>
+              </div>
+            </div>
+            <!-- card end -->
+          </div>
+          <!-- .col-12.text-center>a.btn.btn-outline-primary[href="product.html"]{觀看更多} -->
+          <div class="col-12 text-center">
+            <a href="product.html" class="btn btn-outline-primary">觀看更多</a>
+          </div>
+        </div>
+      </div>
+      <!-- container end -->
+      <!-- .container>.row>.col-12.col-xl-6 -->
+      <!-- 橫式卡片 -->
+      <!-- container strat -->
+      <div class="container mx-auto mb-2">
+        <div class="row">
+          <h2 class="col-12 text-center">最新消息</h2>
+          <div class="col-12 col-md-6 col-xl-6">
+            <div class="card mb-3" style="max-width: 540px">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img
+                    src="https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg?t=1709086268"
+                    class="img-fluid rounded-start"
+                    alt="..."
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Elden Ring</h5>
+                    <p class="card-text">
+                      This is a wider card with supporting text below as a
+                      natural lead-in to additional content. This content is a
+                      little bit longer.
+                    </p>
+                    <p class="card-text">
+                      <small class="text-muted">Last updated 3 mins ago</small>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-6">
+            <div class="card mb-3" style="max-width: 540px">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img
+                    src="https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg?t=1709086268"
+                    class="img-fluid rounded-start"
+                    alt="..."
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Elden Ring</h5>
+                    <p class="card-text">
+                      This is a wider card with supporting text below as a
+                      natural lead-in to additional content. This content is a
+                      little bit longer.
+                    </p>
+                    <p class="card-text">
+                      <small class="text-muted">Last updated 3 mins ago</small>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-12 col-xl-6">
-          <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg?t=1709086268"
-                  class="img-fluid rounded-start" alt="...">
+      </div>
+      <!-- container end -->
+      <!-- container 容器實作 -->
+      <!-- 三欄排版 start -->
+      <!-- .container>.row>.col-4*3>a{商品$} -->
+      <!-- .container>.row>.col-4*3>img.w-100[src='https://placehold.co/600x400']+a{商品$} -->
+      <div class="bg-secondary bg-gradient">
+        <div class="container">
+          <div class="row">
+            <h2 class="col-12 text-center m-2">活動資訊</h2>
+            <div class="col-4">
+              <img
+                class="w-100"
+                src="https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg?t=1709086268"
+                alt=""
+              /><a href="">商品1</a>
+            </div>
+            <div class="col-4">
+              <img class="w-100" src="https://placehold.co/600x400" alt="" /><a
+                href=""
+                >商品2</a
+              >
+            </div>
+            <div class="col-4">
+              <img class="w-100" src="https://placehold.co/600x400" alt="" /><a
+                href=""
+                >商品3</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 三欄排版 end -->
+      <!-- 兩欄排版 start -->
+      <!-- 加上背景色變化 -->
+      <div class="bg-dark">
+        <div class="container mb-5 mt-2">
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <!-- .ration.ration-16x9 -->
+              <div class="ration ration-16x9 mb-4">
+                <!-- youtube 影片嵌入 -->
+                <!-- iframe start -->
+                <iframe
+                  width="438"
+                  height="246"
+                  src="https://www.youtube.com/embed/Q-0s23Wu4QI"
+                  title="MYTH &amp; ROID「Endless Embrace」MV（TVアニメ「メイドインアビス 烈日の黄金郷」EDテーマ）"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+                <!-- iframe end -->
               </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Elden Ring</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                    additional
-                    content. This content is a little bit longer.</p>
-                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="ration ration-16x9 mb-4">
+                <!-- youtube 影片嵌入 -->
+                <!-- iframe start -->
+                <iframe
+                  width="438"
+                  height="246"
+                  src="https://www.youtube.com/embed/Q-0s23Wu4QI"
+                  title="MYTH &amp; ROID「Endless Embrace」MV（TVアニメ「メイドインアビス 烈日の黄金郷」EDテーマ）"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+                <!-- iframe end -->
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- container 容器實作 -->
-    <!-- 三欄排版 start -->
-    <!-- .container>.row>.col-4*3>a{商品$} -->
-    <!-- .container>.row>.col-4*3>img.w-100[src='https://placehold.co/600x400']+a{商品$} -->
-    <div class="container">
-      <div class="row">
-        <div class="col-4">
-          <img class="w-100" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg?t=1709086268"
-            alt="" /><a href="">商品1</a>
-        </div>
-        <div class="col-4">
-          <img class="w-100" src="https://placehold.co/600x400" alt="" /><a href="">商品2</a>
-        </div>
-        <div class="col-4">
-          <img class="w-100" src="https://placehold.co/600x400" alt="" /><a href="">商品3</a>
-        </div>
-      </div>
-    </div>
-    <!-- 三欄排版 end -->
-
-    <!-- 兩欄排版 start -->
-    <div class="container mb-5">
-      <div class="row">
-        <div class="col-12 col-md-6">
-          <!-- .ration.ration-16x9 -->
-          <div class="ration ration-16x9 mb-4">
-            <!-- youtube 影片嵌入 -->
-            <!-- iframe start -->
-            <iframe width="438" height="246" src="https://www.youtube.com/embed/Q-0s23Wu4QI"
-              title="MYTH &amp; ROID「Endless Embrace」MV（TVアニメ「メイドインアビス 烈日の黄金郷」EDテーマ）" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe>
-            <!-- iframe end -->
+      <!-- 兩欄排版 end -->
+      <!-- breakpoint 斷點實作 -->
+      <!-- 四欄排版 start -->
+      <!-- .container>.row>.col-6.col-md-4.col-lg-3*4>img.w-100[src='https://placehold.co/600x400']+a{商品$} -->
+      <div class="container">
+        <div class="row">
+          <div class="col-6 col-md-4 col-lg-3">
+            <img src="https://placehold.co/600x400" alt="" class="w-100" /><a
+              href=""
+              >斷點1</a
+            >
           </div>
-        </div>
-        <div class="col-12 col-md-6">
-          <div class="ration ration-16x9 mb-4">
-            <!-- youtube 影片嵌入 -->
-            <!-- iframe start -->
-            <iframe width="438" height="246" src="https://www.youtube.com/embed/Q-0s23Wu4QI"
-              title="MYTH &amp; ROID「Endless Embrace」MV（TVアニメ「メイドインアビス 烈日の黄金郷」EDテーマ）" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe>
-            <!-- iframe end -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <img src="https://placehold.co/600x400" alt="" class="w-100" /><a
+              href=""
+              >斷點2</a
+            >
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <img src="https://placehold.co/600x400" alt="" class="w-100" /><a
+              href=""
+              >斷點3</a
+            >
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <img src="https://placehold.co/600x400" alt="" class="w-100" /><a
+              href=""
+              >斷點4</a
+            >
           </div>
         </div>
       </div>
-    </div>
-    <!-- 兩欄排版 end -->
-
-    <!-- breakpoint 斷點實作 -->
-    <!-- 四欄排版 start -->
-    <!-- .container>.row>.col-6.col-md-4.col-lg-3*4>img.w-100[src='https://placehold.co/600x400']+a{商品$} -->
-    <div class="container">
-      <div class="row">
-        <div class="col-6 col-md-4 col-lg-3">
-          <img src="https://placehold.co/600x400" alt="" class="w-100" /><a href="">斷點1</a>
+      <!-- 四欄排版 end -->
+    </main>
+    <footer class="bg-primary mt-auto">頁尾</footer>
+    <!-- PageTop -->
+    <!-- href="#" 自動到最頂端 -->
+    <!-- pageTop start -->
+    <a
+      href="#"
+      class="position-fixed bottom-0 end-0 bg-dark text-white m-4 p-2 text-decoration-none"
+      >Top</a
+    >
+    <!-- pageTop end -->
+    <!-- 畫布內容 -->
+    <!-- offcanvas body start -->
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="offcanvasExample"
+      aria-labelledby="offcanvasExampleLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">購物車</h5>
+        <button
+          type="button"
+          class="btn-close text-reset"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="row mb-4">
+          <div class="col-4">
+            <img src="../images/toy_01.png" alt="" class="w-100" />
+          </div>
+          <div class="col-8">
+            <p>商品1</p>
+            <p>個數:1</p>
+            <p class="price">900</p>
+          </div>
         </div>
-        <div class="col-6 col-md-4 col-lg-3">
-          <img src="https://placehold.co/600x400" alt="" class="w-100" /><a href="">斷點2</a>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3">
-          <img src="https://placehold.co/600x400" alt="" class="w-100" /><a href="">斷點3</a>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3">
-          <img src="https://placehold.co/600x400" alt="" class="w-100" /><a href="">斷點4</a>
-        </div>
+        <!-- 購物車按鈕 -->
+        <a href="cart.html" class="btn btn-outline-primary d-block"
+          >查看購物車</a
+        >
       </div>
     </div>
-  </main>
-  <footer class="bg-primary mt-auto">頁尾</footer>
-  <!-- 掛載 Boostrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-    crossorigin="anonymous"></script>
-</body>
-
+    <!-- offcanvas body end -->
+    <!-- 掛載 Boostrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+  </body>
 </html>

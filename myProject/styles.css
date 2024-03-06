@@ -13,3 +13,10 @@
 .bi-youtube{
     color: #ff0000;
 }
+/*  */
+.price::before{
+    content: "NT$";
+}
+.price::after{
+    content: " 元";
+}
