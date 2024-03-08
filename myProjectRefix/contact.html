@@ -3,20 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>聯絡人|Cama</title>
+    <title>聯絡我們|SteamNexus</title>
     <!-- 掛載 Boostrap CSS -->
-    <!-- <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
-      crossorigin="anonymous"
-    /> -->
+    <link rel="stylesheet" href="./css/styles.css" />
     <!-- Boostrap icon css -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
   </head>
 
   <body class="d-flex flex-column h-100">
@@ -24,14 +18,14 @@
       <!-- 導覽列實作 -->
       <!-- header start -->
       <header>
-        <!-- 導覽 導覽摺疊寬幅  淺色模式 -->
+        <!-- 導覽 導覽摺疊寬幅  -->
         <!-- 導覽列可更改顏色樣式 navbar-light、bg-light -->
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
           <!-- container-fluid 寬版:會讓導覽列的寬度固定在 100% -->
           <!-- container 每一個響應式斷點都會設置一個 max-width -->
-          <div class="container-fluid">
+          <div class="container">
             <!-- 導覽列(網站、品牌)標題  navbar-brand -->
-            <a class="navbar-brand" href="index.html">Cama</a>
+            <a class="navbar-brand" href="index.html">SteamNexus</a>
             <!-- navbar-toggler 是 menu-button (那個三條線的菜單按鈕)  -->
             <button
               class="navbar-toggler"
@@ -50,12 +44,13 @@
               <!-- ms-auto  自動靠右 -->
               <!-- me-auto  自動靠左 -->
               <!-- m-auto  中間 -->
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <ul class="navbar-nav m-auto mb-2 mb-lg-0">
                 <!-- active 顯目狀態 -->
                 <li class="nav-item">
                   <a class="nav-link" href="about.html">關於我們</a>
                 </li>
                 <!-- dropdown 開關 -->
+                <!-- dropdown start -->
                 <li class="nav-item dropdown">
                   <a
                     class="nav-link dropdown-toggle"
@@ -70,13 +65,13 @@
                   <!-- dropdown-menu 開關下拉選單 -->
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li>
-                      <a class="dropdown-item" href="product.html">咖啡</a>
+                      <a class="dropdown-item" href="product.html">射擊</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="product.html">餐食</a>
+                      <a class="dropdown-item" href="product.html">格鬥</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="product.html">飲品</a>
+                      <a class="dropdown-item" href="product.html">模擬</a>
                     </li>
                     <li>
                       <hr class="dropdown-divider" />
@@ -86,11 +81,15 @@
                     </li>
                   </ul>
                 </li>
+                <!-- dropdown start -->
                 <li class="nav-item">
                   <a class="nav-link" href="store.html">門市資訊</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="contact.html">關於我們</a>
+                  <a class="nav-link" href="faq.html">常見問題</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">聯絡我們</a>
                 </li>
               </ul>
               <div class="d-flex">
@@ -98,22 +97,27 @@
                   href="javascript:;"
                   data-bs-toggle="modal"
                   data-bs-target="#exampleModal"
-                  ><i class="fs-3 me-2 bi bi-person"></i
+                  ><i class="fs-3 me-2 bi bi-person text-white"></i
                 ></a>
-                <i class="fs-3 me-2 bi bi-cart"></i>
+                <!-- 相對定位 -->
+                <!-- 畫布實作 : 動態範例 -->
+                <a
+                  class="position-relative"
+                  data-bs-toggle="offcanvas"
+                  href="#offcanvasExample"
+                  role="button"
+                  aria-controls="offcanvasExample"
+                >
+                  <!-- 購物車 -->
+                  <i class="fs-3 bi bi-cart text-white"></i>
+                  <!-- 絕對定位 上邊界0 右邊界100 轉變水平置中 標籤 膠囊圓角 紅色背景 -->
+                  <span
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger mt-2"
+                  >
+                    4
+                  </span>
+                </a>
               </div>
-              <!-- form 裝 搜尋按鈕 用的-->
-              <form class="d-flex">
-                <input
-                  class="form-control me-2"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-                <button class="btn btn-outline-success" type="submit">
-                  Search
-                </button>
-              </form>
             </div>
           </div>
         </nav>
@@ -133,26 +137,31 @@
           </nav>
         </div>
       </div>
-      <!-- breadcrumb end -->
-      <!-- .container>.row>.col-12.col-md-3{left}+.col-12.col-md-9 -->
-      <div class="container mb-5">
+      <div class="container">
         <div class="row">
-          <h2 class="col-12">聯絡表單</h2>
-          <!-- 列表群組 實作 -->
-          <div class="col-12 col-md-3">
+          <!-- 左側 start  -->
+          <div class="col-12 col-md-3 mt-3">
+            <h2 class="col-12">常見問題</h2>
             <ul class="list-group">
               <li
                 class="list-group-item list-group-item-action active"
                 aria-current="true"
               >
-                <a class="text-white" href="#">聯絡表單</a>
+                <a class="text-white text-decoration-none" href="#"
+                  >退換貨相關</a
+                >
               </li>
               <li class="list-group-item list-group-item-action">
-                <a href="#">加盟相關</a>
+                <a href="#" class="text-decoration-none">會員相關</a>
+              </li>
+              <li class="list-group-item list-group-item-action">
+                <a href="#" class="text-decoration-none">購物相關</a>
               </li>
             </ul>
           </div>
-          <div class="col-12 col-md-9">
+          <!-- 左側 end  -->
+          <!-- 右側 start  -->
+          <div class="col-12 col-md-9 mt-3 mb-3">
             <!-- 表單製作 -->
             <!-- form start -->
             <!-- 關掉預設驗證 novalidate class = "needs-validation" -->
@@ -301,15 +310,12 @@
               </div>
             </form>
             <!-- form end -->
-            <!-- 
-              比例設定 16:9 
-              .ration.ration-16x9
-          -->
-            <div class="ratio ratio-16x9">
-              <!-- google map 嵌入 -->
-              <!-- iframe start -->
+            <!-- 比例設定 .ratio .ratio-16x9 -->
+            <!-- iframe google map -->
+            <!-- iframe start -->
+            <div class="ratio ratio-16x9 m-3">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.6851439425695!2d120.29046864033539!3d22.628229831013506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e047cb59c5ef1%3A0xeb0d3d3bee586e78!2z6LOH562W5pyDLeaVuOS9jeaVmeiCsueglOeptuaJgC3ljZfljYDoqJPnt7TkuK3lv4Mo6auY6ZuEKQ!5e0!3m2!1szh-TW!2stw!4v1709535910809!5m2!1szh-TW!2stw"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d651.1397968560341!2d120.33354658469999!3d22.601424100794627!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0333dd03719f%3A0x5ddfa8ef2baee49a!2z6J2m55qu5bqX5Yiw5bqXIOmzs-WxseWWhOe-juW6lw!5e0!3m2!1szh-TW!2stw!4v1709907334286!5m2!1szh-TW!2stw"
                 width="600"
                 height="450"
                 style="border: 0"
@@ -317,20 +323,92 @@
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
               ></iframe>
-              <!-- iframe end -->
             </div>
+            <!-- iframe end -->
           </div>
+          <!-- 右側 end  -->
         </div>
       </div>
     </main>
-    <footer class="bg-primary mt-auto">頁尾</footer>
+    <footer class="bg-primary mt-auto text-center text-white">
+      Page end
+      <br />
+      本網站僅供練習用，不做為商業用途
+    </footer>
+
     <!-- PageTop -->
     <!-- href="#" 自動到最頂端 -->
+    <!-- pageTop start -->
     <a
       href="#"
       class="position-fixed bottom-0 end-0 bg-dark text-white m-4 p-2 text-decoration-none"
       >Top</a
     >
+    <!-- pageTop end -->
+    <!-- 畫布內容 -->
+    <!-- offcanvas body start -->
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="offcanvasExample"
+      aria-labelledby="offcanvasExampleLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">購物車</h5>
+        <button
+          type="button"
+          class="btn-close text-reset"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="row mb-4">
+          <div class="col-4">
+            <img src="./images/product_1.jpg" alt="" class="w-100" />
+          </div>
+          <div class="col-8">
+            <p>商品1</p>
+            <p>個數:1</p>
+            <p class="price">1790</p>
+          </div>
+        </div>
+        <div class="row mb-4">
+          <div class="col-4">
+            <img src="./images/product_2.jpg" alt="" class="w-100" />
+          </div>
+          <div class="col-8">
+            <p>商品2</p>
+            <p>個數:1</p>
+            <p class="price">920</p>
+          </div>
+        </div>
+        <div class="row mb-4">
+          <div class="col-4">
+            <img src="./images/product_3.jpg" alt="" class="w-100" />
+          </div>
+          <div class="col-8">
+            <p>商品3</p>
+            <p>個數:1</p>
+            <p class="price">1680</p>
+          </div>
+        </div>
+        <div class="row mb-4">
+          <div class="col-4">
+            <img src="./images/product_4.jpg" alt="" class="w-100" />
+          </div>
+          <div class="col-8">
+            <p>商品4</p>
+            <p>個數:1</p>
+            <p class="price">1250</p>
+          </div>
+        </div>
+        <!-- 購物車按鈕 -->
+        <a href="cart.html" class="btn btn-outline-primary d-block"
+          >查看購物車</a
+        >
+      </div>
+    </div>
     <!-- 互動視窗實作 -->
     <!-- 需要透過 data-bs-toggle="modal" data-bs-target="#exampleModal" 這兩個屬性觸發 -->
     <!-- Modal start -->
@@ -398,14 +476,13 @@
         </div>
       </div>
     </div>
-    <!-- Modal end -->
+    <!-- 掛載自己的 JS -->
+    <script src="./js/script.js"></script>
     <!-- 掛載 Boostrap JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
       crossorigin="anonymous"
     ></script>
-
-    <script src="./script.js"></script>
   </body>
 </html>
