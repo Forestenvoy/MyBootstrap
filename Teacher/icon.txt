@@ -1,0 +1,9 @@
+<i class="fs-3 bi bi-facebook"></i>
+<i class="fs-3 bi bi-instagram"></i>
+<i class="fs-3 bi bi-line"></i>
+<i class="fs-3 bi bi-youtube"></i>
+
+<i class="bi bi-cart"></i>
+<i class="bi bi-person"></i>
+<i class="bi bi-suit-heart"></i>
+<i class="bi bi-suit-heart-fill"></i>

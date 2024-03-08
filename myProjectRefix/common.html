@@ -3,14 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>首頁|SteamNexus</title>
+    <title>通用|SteamNexus</title>
     <!-- 掛載 Boostrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="./css/styles.css" />
     <!-- Boostrap icon css -->
     <link
       rel="stylesheet"
@@ -23,14 +18,14 @@
       <!-- 導覽列實作 -->
       <!-- header start -->
       <header>
-        <!-- 導覽 導覽摺疊寬幅  淺色模式 -->
+        <!-- 導覽 導覽摺疊寬幅  -->
         <!-- 導覽列可更改顏色樣式 navbar-light、bg-light -->
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
           <!-- container-fluid 寬版:會讓導覽列的寬度固定在 100% -->
           <!-- container 每一個響應式斷點都會設置一個 max-width -->
-          <div class="container-fluid">
+          <div class="container">
             <!-- 導覽列(網站、品牌)標題  navbar-brand -->
-            <a class="navbar-brand" href="index.html">Cama</a>
+            <a class="navbar-brand" href="index.html">SteamNexus</a>
             <!-- navbar-toggler 是 menu-button (那個三條線的菜單按鈕)  -->
             <button
               class="navbar-toggler"
@@ -49,12 +44,13 @@
               <!-- ms-auto  自動靠右 -->
               <!-- me-auto  自動靠左 -->
               <!-- m-auto  中間 -->
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <ul class="navbar-nav m-auto mb-2 mb-lg-0">
                 <!-- active 顯目狀態 -->
                 <li class="nav-item">
                   <a class="nav-link" href="about.html">關於我們</a>
                 </li>
                 <!-- dropdown 開關 -->
+                <!-- dropdown start -->
                 <li class="nav-item dropdown">
                   <a
                     class="nav-link dropdown-toggle"
@@ -69,13 +65,13 @@
                   <!-- dropdown-menu 開關下拉選單 -->
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li>
-                      <a class="dropdown-item" href="product.html">咖啡</a>
+                      <a class="dropdown-item" href="product.html">射擊</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="product.html">餐食</a>
+                      <a class="dropdown-item" href="product.html">格鬥</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="product.html">飲品</a>
+                      <a class="dropdown-item" href="product.html">模擬</a>
                     </li>
                     <li>
                       <hr class="dropdown-divider" />
@@ -85,11 +81,15 @@
                     </li>
                   </ul>
                 </li>
+                <!-- dropdown start -->
                 <li class="nav-item">
                   <a class="nav-link" href="store.html">門市資訊</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="contact.html">關於我們</a>
+                  <a class="nav-link" href="faq.html">常見問題</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">聯絡我們</a>
                 </li>
               </ul>
               <div class="d-flex">
@@ -97,22 +97,27 @@
                   href="javascript:;"
                   data-bs-toggle="modal"
                   data-bs-target="#exampleModal"
-                  ><i class="fs-3 me-2 bi bi-person"></i
+                  ><i class="fs-3 me-2 bi bi-person text-white"></i
                 ></a>
-                <i class="fs-3 me-2 bi bi-cart"></i>
+                <!-- 相對定位 -->
+                <!-- 畫布實作 : 動態範例 -->
+                <a
+                  class="position-relative"
+                  data-bs-toggle="offcanvas"
+                  href="#offcanvasExample"
+                  role="button"
+                  aria-controls="offcanvasExample"
+                >
+                  <!-- 購物車 -->
+                  <i class="fs-3 bi bi-cart text-white"></i>
+                  <!-- 絕對定位 上邊界0 右邊界100 轉變水平置中 標籤 膠囊圓角 紅色背景 -->
+                  <span
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger mt-2"
+                  >
+                    4
+                  </span>
+                </a>
               </div>
-              <!-- form 裝 搜尋按鈕 用的-->
-              <form class="d-flex">
-                <input
-                  class="form-control me-2"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-                <button class="btn btn-outline-success" type="submit">
-                  Search
-                </button>
-              </form>
             </div>
           </div>
         </nav>
@@ -120,7 +125,7 @@
       <!-- header end -->
       <!-- 麵包屑實作 -->
       <!-- breadcrumb start -->
-      <div class="p-3 bg-light mb-5">
+      <!-- <div class="p-3 bg-light mb-5">
         <div class="container">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb mb-0">
@@ -131,9 +136,156 @@
             </ol>
           </nav>
         </div>
-      </div>
+      </div> -->
     </main>
-    <footer class="bg-primary mt-auto">Page End</footer>
+    <footer class="bg-primary mt-auto text-center text-white">
+      Page end
+      <br />
+      本網站僅供練習用，不做為商業用途
+    </footer>
+
+    <!-- PageTop -->
+    <!-- href="#" 自動到最頂端 -->
+    <!-- pageTop start -->
+    <a
+      href="#"
+      class="position-fixed bottom-0 end-0 bg-dark text-white m-4 p-2 text-decoration-none"
+      >Top</a
+    >
+    <!-- pageTop end -->
+    <!-- 畫布內容 -->
+    <!-- offcanvas body start -->
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="offcanvasExample"
+      aria-labelledby="offcanvasExampleLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">購物車</h5>
+        <button
+          type="button"
+          class="btn-close text-reset"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="row mb-4">
+          <div class="col-4">
+            <img src="./images/product_1.jpg" alt="" class="w-100" />
+          </div>
+          <div class="col-8">
+            <p>商品1</p>
+            <p>個數:1</p>
+            <p class="price">1790</p>
+          </div>
+        </div>
+        <div class="row mb-4">
+          <div class="col-4">
+            <img src="./images/product_2.jpg" alt="" class="w-100" />
+          </div>
+          <div class="col-8">
+            <p>商品2</p>
+            <p>個數:1</p>
+            <p class="price">920</p>
+          </div>
+        </div>
+        <div class="row mb-4">
+          <div class="col-4">
+            <img src="./images/product_3.jpg" alt="" class="w-100" />
+          </div>
+          <div class="col-8">
+            <p>商品3</p>
+            <p>個數:1</p>
+            <p class="price">1680</p>
+          </div>
+        </div>
+        <div class="row mb-4">
+          <div class="col-4">
+            <img src="./images/product_4.jpg" alt="" class="w-100" />
+          </div>
+          <div class="col-8">
+            <p>商品4</p>
+            <p>個數:1</p>
+            <p class="price">1250</p>
+          </div>
+        </div>
+        <!-- 購物車按鈕 -->
+        <a href="cart.html" class="btn btn-outline-primary d-block"
+          >查看購物車</a
+        >
+      </div>
+    </div>
+    <!-- 互動視窗實作 -->
+    <!-- 需要透過 data-bs-toggle="modal" data-bs-target="#exampleModal" 這兩個屬性觸發 -->
+    <!-- Modal start -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <!-- 互動視窗容器 modal-dialog -->
+      <!-- modal-dialog-centered 使互動視窗置中 -->
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <!-- 互動視窗標題 modal-title -->
+            <h5 class="modal-title" id="exampleModalLabel">登入</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <!-- 互動視窗內容 modal-body -->
+          <div class="modal-body">
+            <form action="" class="needs-validation" novalidate>
+              <p>立即登入，隨時收到獨家優惠</p>
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="floatingInput"
+                  placeholder="name@example.com"
+                  required
+                />
+                <div class="invalid-feedback">請輸入電子郵件</div>
+                <label for="floatingInput">Email address</label>
+              </div>
+              <div class="form-floating">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="floatingPassword"
+                  placeholder="Password"
+                  required
+                />
+                <div class="invalid-feedback">請輸入密碼</div>
+                <label for="floatingPassword">Password</label>
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-primary mt-3">
+                  送出表單
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-secondary mt-3"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 掛載自己的 JS -->
+    <script src="./js/script.js"></script>
     <!-- 掛載 Boostrap JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"

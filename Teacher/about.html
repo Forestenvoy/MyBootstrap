@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>關於我們|Cama</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    
+</head>
+<body class="d-flex flex-column h-100">
+    <main class="flex-shrink-0">
+        <header >
+            <!-- 導覽 導覽摺疊寬幅 淺色模式 背景色 -->
+            <nav class="navbar navbar-expand-xl navbar-light ">
+                <!-- 寬版 container -->
+                <div class="container">
+                    <!-- logo -->
+                    <a class="navbar-brand" href="index.html">Cama</a>
+                    <!-- menu btn -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- margin left/start  ms-auto         right/end me-auto      margin:auto m-auto -->
+                    <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">關於我們</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="javascript:;" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        產品列表
+                        </a>
+                        <!-- dropdown menu 下拉選單 -->
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="product.html">咖啡</a></li>
+                        <li><a class="dropdown-item" href="product.html">餐食</a></li>
+                        <li><a class="dropdown-item" href="product.html">飲品</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="store.html">門市資訊</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">常見問題</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">聯絡我們</a>
+                    </li>
+                    </ul>
+                    <div class="d-flex">
+                        <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fs-3 me-2 bi bi-person"></i></a>
+                        <i class="fs-3 bi bi-cart"></i>
+                        <form action="">
+
+                            <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+                            <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+                        </form>
+                    </div>
+                </div>
+                </div>
+            </nav>
+        </header>
+        <div class="p-3 bg-light mb-5">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item"><a href="index.html">首頁</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">關於我們</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <!-- h2.col-12 -->
+                <h2 class="col-12">關於我們</h2>
+                <!-- 左半邊 start-->
+                <div class="col-12 col-md-3 ">
+                    <ul class="list-group">
+                        <li class="list-group-item active" aria-current="true"><a href="" class="text-white">品牌故事</a></li>
+                        <li class="list-group-item"><a href="#">公司沿革</a></li>
+                      </ul>
+                </div>
+                <!-- 左半邊 end-->
+                <!-- 右半邊 start-->
+                <div class="col-12 col-md-9 ">
+                    <!-- row start -->
+                    <div class="row mb-4">
+                        <div class="col-12 col-md-6"><img class="w-100" src="./images/about-01.jpg" alt=""></div>
+                        <div class="col-12 col-md-6 ">
+                            <h3 class="mt-3 mb-4">
+                                Bean-to-Cup <br>
+                                從一顆生豆 ‧ 到一杯咖啡
+                            </h3>
+                            <p>
+                                我們深知一杯美味咖啡的各項環節與要素。
+                                所以我們選擇在店內精準演繹整個Bean-to-Cup流程。
+                                手工挑豆、得宜烘焙、即時研磨、黃金萃取與吧台手藝....
+                                從一顆生豆到一杯咖啡，最透明的製作流程，提供最真誠的賞味體驗。
+                                在cama咖啡研究室的把關下，
+                                六位國際杯測師的味蕾， 就是您品質的堡壘。
+                                對於您手中的咖啡品質，我們有著100%的堅持。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-12 col-md-6 order-md-2"><img class="w-100" src="./images/about-02.jpg" alt=""></div>
+                        <div class="col-12 col-md-6 order-md-1 ">
+                            <h3>
+                                A-ranked Brewing <br>
+                                差一秒就倒掉，是我們追求最佳萃取時間的態度 <br>
+                                Ｏur passionate baristas are highly trained and ready to serve.
+                            </h3>
+                            <p>咖啡吧台師傅擁有的超高實力，
+
+                                正是一家店與其他店分出高下的魅力所在。
+                                
+                                cama的吧台師傅具有超高技術水準，
+                                
+                                心中永遠想著要提供讓客人滿足、好喝的咖啡。</p>
+                        </div>
+                    </div>
+
+                    <div class="row mb-4">
+                        <div class="col-12 col-md-6"><img class="w-100" src="./images/about-03.jpg" alt=""></div>
+                        <div class="col-12 col-md-6">
+                            <h3>C‧A‧M‧A <br> cama的核心價值</h3>
+                            <p>Carefully Graded
+                                手工挑豆的秘訣，誠實與堅持而已
+                                we handpicked the defective green beans before roasting.
+                                咖啡生豆常混入雜質及瑕疵豆，
+                                我們在烘焙之前，一定會以人工手選挑除瑕疵豆，
+                                將影響咖啡品質的不良豆挑除。</p>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-12 col-md-6 order-md-2"><img class="w-100" src="./images/about-04.jpg" alt=""></div>
+                        <div class="col-12 col-md-6 order-md-1">
+                            <h3>
+                                Mellow Roasting
+                                看得到的新鮮，勝過千言萬語
+                                Believing and pursuing fresh coffee with the great taste.
+                            </h3>
+                            <p>咖啡生豆經烘焙後二～七天味道和香氣會達到頂點。
+
+                                新鮮烘焙的咖啡豆可以說是咖啡好喝的最大關鍵！
+                                
+                                我們堅持給您最佳賞味期限的咖啡。</p>
+                        </div>
+                    </div>
+                    <!-- row end -->
+                </div>
+                <!-- 右半邊 end-->
+            </div>
+        </div>
+    </main>
+
+    
+    
+    <footer class="bg-dark p-3 text-white text-center mt-auto">本網站僅供練習用，不做為商業用途</footer>
+    <a href="#" class="position-fixed bottom-0 end-0 bg-dark text-white m-4 p-2 text-decoration-none">TOP</a>
+
+     <!-- Modal start -->
+     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">登入Cama</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="" class="needs-validation" autocomplete="off" novalidate> 
+                    <div class="modal-body">
+                        <p>立即登入，隨時收到獨家優惠</p>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" name="account" id="floatingInput" placeholder="name@example.com" required>
+                            <div class="invalid-feedback">此為必填項目</div>
+                            <label for="floatingInput">電子郵件</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="password" class="form-control" name="password" id="floatingPassword" placeholder="Password" required>
+                            <div class="invalid-feedback">此為必填項目</div>
+                            <label for="floatingPassword">密碼</label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">送出表單</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Modal end -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

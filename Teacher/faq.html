@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聯絡我們|Cama</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="d-flex flex-column h-100">
+    <main class="flex-shrink-0">
+        <header >
+            <!-- 導覽 導覽摺疊寬幅 淺色模式 背景色 -->
+            <nav class="navbar navbar-expand-xl navbar-light ">
+                <!-- 寬版 container -->
+                <div class="container">
+                    <!-- logo -->
+                    <a class="navbar-brand" href="index.html">Cama</a>
+                    <!-- menu btn -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- margin left/start  ms-auto         right/end me-auto      margin:auto m-auto -->
+                    <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">關於我們</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="javascript:;" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        產品列表
+                        </a>
+                        <!-- dropdown menu 下拉選單 -->
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="product.html">咖啡</a></li>
+                        <li><a class="dropdown-item" href="product.html">餐食</a></li>
+                        <li><a class="dropdown-item" href="product.html">飲品</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="store.html">門市資訊</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="faq.html">常見問題</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">聯絡我們</a>
+                    </li>
+                    </ul>
+                    <div class="d-flex">
+                        <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fs-3 me-2 bi bi-person"></i></a>
+                        <i class="fs-3 bi bi-cart"></i>
+                        <form action="">
+
+                            <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+                            <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+                        </form>
+                    </div>
+                </div>
+                </div>
+            </nav>
+        </header>
+        <div class="p-3 bg-light mb-5">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item"><a href="index.html">首頁</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">常見問題</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <div class="container mb-5">
+            <div class="row">
+                <h2 class="col-12">常見問題</h2>
+                <div class="col-12 col-md-3">
+                    <ul class="list-group">
+                        <li class="list-group-item active" aria-current="true"><a href="" class="text-white">退換貨相關</a></li>
+                        <li class="list-group-item"><a href="#">會員相關</a></li>
+                        <li class="list-group-item"><a href="#">購物相關</a></li>
+                      </ul>
+                </div>
+                <div class="col-12 col-md-9 ">
+                    <!-- accordion start -->
+                    <div class="accordion" id="accordionExample">
+                        <!-- 第一組 start -->
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                              Q：cama café App系統更新相關問題
+                            </button>
+                          </h2>
+                          <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>Ａ可能為系統版本問題，如卸載重新安裝一樣無法操作，請填寫表單申訴，將盡快排除問題</p>                                    
+                            </div>
+                          </div>
+                        </div>
+                        <!-- 第一組 end  -->
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              Q：cama pay無法綁卡
+                            </button>
+                          </h2>
+                          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                              <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              Q：如何辦理退貨?
+                            </button>
+                          </h2>
+                          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                                Q：可以換貨嗎?換貨流程?
+                              </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                              <div class="accordion-body">
+                                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                              </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+                                Q：辦理退貨時，如商品有缺失是否還能退貨?
+                              </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                              <div class="accordion-body">
+                                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- accordion end -->
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-dark p-3 text-white text-center mt-auto">本網站僅供練習用，不做為商業用途</footer>
+
+
+
+
+    
+    <!-- Modal start -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">登入Cama</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="" class="needs-validation" autocomplete="off" novalidate> 
+                    <div class="modal-body">
+                        <p>立即登入，隨時收到獨家優惠</p>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" name="account" id="floatingInput" placeholder="name@example.com" required>
+                            <div class="invalid-feedback">此為必填項目</div>
+                            <label for="floatingInput">電子郵件</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="password" class="form-control" name="password" id="floatingPassword" placeholder="Password" required>
+                            <div class="invalid-feedback">此為必填項目</div>
+                            <label for="floatingPassword">密碼</label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">送出表單</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Modal end -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
